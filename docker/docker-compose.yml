@@ -1,0 +1,24 @@
+version: "3.3"
+
+services:
+
+  db:
+    image: postgis/postgis:latest
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - VITREO_DB:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=story_db
+      - POSTGRES_USER=story_db
+      - POSTGRES_PASSWORD=story_db
+    networks:
+      - local
+
+volumes:
+  VITREO_DB:
+  ASSETS:
+
+networks:
+  local:
