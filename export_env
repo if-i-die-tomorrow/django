@@ -1,0 +1,2 @@
+#!/usr/bin/env zsh
+conda env export --no-builds | grep -v "prefix" > environment.yml

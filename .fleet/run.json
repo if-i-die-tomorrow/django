@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "python",
+            "name": "run django",
+            "workingDir": "project/",
+            "file": "manage.py",
+            "arguments": ["runserver","localhost:8000"],
+        },
+        
+    ]
+}
