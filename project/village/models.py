@@ -17,7 +17,7 @@ class NPC(models.Model):
     firstname = models.CharField(max_length=50)
     lastname = models.CharField(max_length=50)
     bio = models.CharField(max_length=10, blank=True, null=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    pc = models.ForeignKey(User, on_delete=models.CASCADE)
     job = models.ForeignKey(Job, on_delete=models.SET_NULL, blank=True, null=True)
 
     def __str__(self):
